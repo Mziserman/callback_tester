@@ -1,0 +1,9 @@
+class CreateBelongsTo < ActiveRecord::Migration[7.0]
+  def change
+    create_table :belongs_tos do |t|
+      t.references :callbacker, null: false, foreign_key: true
+
+      t.timestamps
+    end
+  end
+end
